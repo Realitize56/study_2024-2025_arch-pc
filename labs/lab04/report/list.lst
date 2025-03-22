@@ -1,0 +1,9 @@
+     1                                   ; hello.asm
+     2                                  SECTION .data                          ; Начало секции данных
+     3 00000000 48656C6C6F20776F72-     hello: DB 'Hello world!',10            ; 'Hello world!'плюс
+     3 00000009 6C64210A           
+     4                                                                         ; символ перевода строки
+     5                                  helloLen: EQU $-hello                  ; Длина строки hello
+     6                                  
+     7                                  SECTION .text                          ; Начало секции кода     
+     8                                     GLOBAL _start 
